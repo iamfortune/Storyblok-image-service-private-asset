@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import StoryblokClient from "storyblok-js-client";
 
 const Storyblok = new StoryblokClient({
-	accessToken: "5BtK7LI8vieGBr4TMQxDNwtt",
+	accessToken: "Add your access token here",
 	cache: {
 		clear: "auto",
 		type: "memory",
@@ -26,6 +26,7 @@ const App = () => {
 				console.log(res);
 
 				setSignedUrl(
+					// testing image asset with private asset 
 					`http://private-img.storyblok.com/${res?.data?.asset?.signed_url}/m/500x500/filters:grayScale()`
 				);
 			} catch (error) {
